@@ -1,6 +1,10 @@
 #ifndef TLV_H_
 #define TLV_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <endian.h>
 #include "../types.h"
 
@@ -48,5 +52,8 @@ int tlv_put_integer(word nLength , int nValue, void * pOut);
 int tlv_put_byte_array(word nLength , const void * pValue, void * pOut);
 int tlv_put_string(const char * szValue, word wMaxLen, void * pOut);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* TLV_H_ */
